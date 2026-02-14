@@ -1,0 +1,305 @@
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    min-height: 100vh;
+}
+
+/* Background effect */
+.maindiv {
+    min-height: 100vh;
+    background:
+        radial-gradient(circle at top left, #1e90ff, transparent 40%),
+        radial-gradient(circle at bottom right, #ff2f92, transparent 40%),
+        linear-gradient(135deg, #0b1c3d, #3b1c5a);
+}
+
+/* Navbar glass effect and spacing */
+.navbar {
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+    padding: 15px 30px;
+    /* spacing inside navbar */
+    background-color: rgba(255, 255, 255, 0.05) !important;
+    /* slight transparency */
+}
+
+/* Logo styling and alignment */
+.navbar-brand {
+    margin-right: auto;
+    /* push nav items to the right */
+    font-weight: bold;
+    font-size: 24px;
+    color: white !important;
+}
+
+/* Nav items alignment and spacing */
+.navbar-nav {
+    margin-left: auto;
+    /* keep nav items right */
+}
+
+.nav-link {
+    color: white !important;
+    margin-left: 15px;
+    /* space between links */
+}
+
+.section2 {
+    margin-right: 50px;
+    margin-left: 50px;
+    margin-bottom: 50px;
+    display: grid;
+}
+
+/* Section padding so content is below navbar */
+section {
+    padding-top: 80px;
+    /* extra space for fixed-top navbar */
+}
+
+section#home {
+    padding-top: 150px;
+    /* more space for home section */
+}
+
+.home {
+
+    color: white;
+    padding: 50px;
+}
+
+.home {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-size: 25px;
+    margin-bottom: 10px;
+    font-style: bold;
+    font-weight: 600;
+}
+
+/* .home h3::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    width: 80px;
+    height: 4px;
+    background: linear-gradient(90deg, #0880f0, #ff2f92);
+    border-radius: 4px;
+} */
+ .home h3  {
+    animation: textSlide 4s ease-in-out infinite;
+}
+
+
+@keyframes textSlide {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    30% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    70% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    100% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+}
+
+.home p {
+    font-size: 18px;
+    text-align: justify;
+    max-width: 600px;
+}
+
+.img {
+    height: 350px;
+    width: 350px;
+    border-radius: 50%;
+
+    float: right;
+    margin-top: -340px;
+    margin-right: 9px;
+
+}
+
+a:hover {
+    color: #0880f0f1 !important;
+    text-decoration: none;
+}
+
+/* About section */
+.About_section {
+    color: white;
+    padding: 60px;
+    width: 100%;
+    margin: 80px auto 40px;
+
+    border-radius: 16px;
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
+
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+/* Hover lift effect */
+.About_section:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.35);
+}
+
+
+/* Highlight ME */
+.about h2 span {
+    color: #0880f0;
+}
+
+.about p {
+    font-size: 18px;
+    line-height: 1.8;
+    max-width: 800px;
+    text-align: justify;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.about h2,
+.home h3 {
+    font-size: 48px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+    position: relative;
+    color: white;           /* 👈 MAIN COLOR WHITE */
+    text-transform: uppercase;
+}
+.home h3 span{
+    color: #0880f0;
+}
+.about h2::after,
+.home h3::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    width: 80px;
+    height: 4px;
+    background: linear-gradient(90deg, #0880f0, #ff2f92);
+    border-radius: 4px;
+}
+.about_section {
+    margin-right: 50px;
+    margin-left: 50px;
+    margin-bottom: 100px;
+    display: grid;
+}
+/* Contact Section */
+.contact {
+    color: white;
+    padding: 30px;
+    width: 40%;
+    margin: 90px auto 50px;
+    border-radius: 16px;
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
+}
+
+.contact h2 {
+    font-size: 48px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    margin-bottom: 30px;
+    position: relative;
+    text-transform: uppercase;
+}
+
+.contact h2 span {
+    color: #0880f0;
+}
+
+.contact h2::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    width: 90px;
+    height: 5px;
+    background: linear-gradient(90deg, #0880f0, #ff2f92);
+    border-radius: 4px;
+}
+
+/* Form inputs */
+.form-label {
+    display: block;
+    margin-bottom: 6px;
+}
+
+.form-control {
+    width: 100%;
+    padding: 8px;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    color: white;
+    border-radius: 6px;
+}
+
+.form-control::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+    
+}
+input.form-control,
+textarea.form-control {
+    margin-bottom: 15px;
+    background-color:  rgba(255, 255, 255, 0.1);    
+}
+
+.btn {
+    margin-top: 10px;
+}
+.social-icons {
+    margin-top: 25px;
+    display: flex;
+    gap: 18px;
+}
+
+.social-icons a {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.15);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 20px;
+    transition: all 0.3s ease;
+}
+
+.social-icons a:hover {
+    background: #0880f0;
+    transform: translateY(-4px);
+}
